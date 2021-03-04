@@ -2,8 +2,10 @@
 
 namespace Braincrafted\Bundle\BootstrapBundle\Form\Extension;
 
+use phpDocumentor\Reflection\Utils;
 use Symfony\Component\Form\AbstractTypeExtension;
 use Symfony\Component\Form\ButtonBuilder;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\Form\FormView;
@@ -124,5 +126,10 @@ class InputGroupButtonExtension extends AbstractTypeExtension
         }
 
         $this->buttons[$form->getName()][$position] = $buttonBuilder;
+    }
+
+    public static function getExtendedTypes(): iterable
+    {
+        return [TextType::class];
     }
 }
