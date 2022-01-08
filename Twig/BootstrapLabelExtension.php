@@ -7,8 +7,8 @@
 
 namespace Braincrafted\Bundle\BootstrapBundle\Twig;
 
-use Twig_Extension;
-use Twig_SimpleFunction;
+use Twig\TwigFunction;
+use Twig\Extension\AbstractExtension;
 
 /**
  * BootstrapLabelExtension
@@ -21,7 +21,7 @@ use Twig_SimpleFunction;
  * @license    http://opensource.org/licenses/MIT The MIT License
  * @link       http://bootstrap.braincrafted.com Bootstrap for Symfony2
  */
-class BootstrapLabelExtension extends Twig_Extension
+class BootstrapLabelExtension extends AbstractExtension
 {
     /**
      * {@inheritDoc}
@@ -31,12 +31,12 @@ class BootstrapLabelExtension extends Twig_Extension
         $options = array('pre_escape' => 'html', 'is_safe' => array('html'));
 
         return array(
-            new Twig_SimpleFunction('label', array($this, 'labelFunction'), $options),
-            new Twig_SimpleFunction('label_primary', array($this, 'labelPrimaryFunction'), $options),
-            new Twig_SimpleFunction('label_success', array($this, 'labelSuccessFunction'), $options),
-            new Twig_SimpleFunction('label_info', array($this, 'labelInfoFunction'), $options),
-            new Twig_SimpleFunction('label_warning', array($this, 'labelWarningFunction'), $options),
-            new Twig_SimpleFunction('label_danger', array($this, 'labelDangerFunction'), $options)
+            new TwigFunction('label', array($this, 'labelFunction'), $options),
+            new TwigFunction('label_primary', array($this, 'labelPrimaryFunction'), $options),
+            new TwigFunction('label_success', array($this, 'labelSuccessFunction'), $options),
+            new TwigFunction('label_info', array($this, 'labelInfoFunction'), $options),
+            new TwigFunction('label_warning', array($this, 'labelWarningFunction'), $options),
+            new TwigFunction('label_danger', array($this, 'labelDangerFunction'), $options)
         );
     }
 

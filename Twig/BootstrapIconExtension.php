@@ -6,9 +6,9 @@
 
 namespace Braincrafted\Bundle\BootstrapBundle\Twig;
 
-use Twig_Extension;
-use Twig_SimpleFilter;
-use Twig_SimpleFunction;
+use Twig\TwigFunction;
+use Twig\TwigFilter;
+use Twig\Extension\AbstractExtension;
 
 /**
  * BootstrapIconExtension
@@ -20,7 +20,7 @@ use Twig_SimpleFunction;
  * @license    http://opensource.org/licenses/MIT The MIT License
  * @link       http://bootstrap.braincrafted.com Bootstrap for Symfony2
  */
-class BootstrapIconExtension extends Twig_Extension
+class BootstrapIconExtension extends AbstractExtension
 {
     /**
      * @var string
@@ -48,7 +48,7 @@ class BootstrapIconExtension extends Twig_Extension
     public function getFilters()
     {
         return array(
-            new Twig_SimpleFilter(
+            new TwigFilter(
                 'parse_icons',
                 array($this, 'parseIconsFilter'),
                 array('pre_escape' => 'html', 'is_safe' => array('html'))
@@ -62,7 +62,7 @@ class BootstrapIconExtension extends Twig_Extension
     public function getFunctions()
     {
         return array(
-            new Twig_SimpleFunction(
+            new TwigFunction(
                 'icon',
                 array($this, 'iconFunction'),
                 array('pre_escape' => 'html', 'is_safe' => array('html'))
