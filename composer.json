@@ -1,6 +1,6 @@
 {
-    "name":         "kaistaerk/bootstrap-bundle",
-    "description":  "KaistaerkBootstrapBundle integrates Bootstrap into Symfony4 by providing templates, Twig extensions, services and commands. It's forked from BraincraftedBootstrapBundle",
+    "name":         "paaacman/bootstrap-bundle",
+    "description":  "BraincraftedBootstrapBundle integrates Bootstrap into Symfony4 by providing templates, Twig extensions, services and commands. It's forked from BraincraftedBootstrapBundle",
     "keywords":     ["bootstrap"],
     "type":         "symfony-bundle",
     "license":      "MIT",
