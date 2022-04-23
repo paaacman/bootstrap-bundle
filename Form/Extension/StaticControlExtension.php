@@ -54,15 +54,10 @@ class StaticControlExtension extends AbstractTypeExtension
 
     /**
      * {@inheritdoc}
-     * Although we only support a field that provides a somewhat text-value we extend the form field.
-     * (to be more precise: all fields which will be rendered as form_widget_simple)
-     * If not we would have to create for every of the text-based types an own extension class.
-     * This way we also support new text-based types out of the box.
      */
-    public function getExtendedType()
+    public static function getExtendedTypes(): iterable
     {
-        // map old class to new one using LegacyFormHelper
-        return LegacyFormHelper::getType('form');
+        return [FormType::class];
     }
 
     public static function getExtendedTypes(): iterable

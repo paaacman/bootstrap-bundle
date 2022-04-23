@@ -44,10 +44,9 @@ class ButtonTypeExtension extends AbstractTypeExtension
     /**
      * {@inheritdoc}
      */
-    public function getExtendedType()
+    public static function getExtendedTypes(): iterable
     {
-        // map old class to new one using LegacyFormHelper
-        return LegacyFormHelper::getType('button');
+        return [ButtonType::class];
     }
 
 

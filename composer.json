@@ -1,14 +1,14 @@
 {
-    "name":         "shaygan/bootstrap-bundle",
-    "description":  "BraincraftedBootstrapBundle integrates Bootstrap into Symfony2 by providing templates, Twig extensions, services and commands.",
+    "name":         "paaacman/bootstrap-bundle",
+    "description":  "BraincraftedBootstrapBundle integrates Bootstrap into Symfony4 by providing templates, Twig extensions, services and commands. It's forked from BraincraftedBootstrapBundle",
     "keywords":     ["bootstrap"],
     "type":         "symfony-bundle",
     "license":      "MIT",
     "authors":     [
         {
-            "name":     "Florian Eckerstorfer",
-            "email":    "florian@eckerstorfer.co",
-            "homepage": "http://florian.ec"
+            "name":     "Kai Stärk",
+            "email":    "kaistaerk@gmail.com",
+            "homepage": "https://www.staerk-software.de"
         }
     ],
     "require":      {
@@ -29,9 +29,9 @@
         "mockery/mockery":              "~0.9"
     },
     "suggest":      {
-        "knplabs/knp-paginator-bundle": "BraincraftedBootstrapBundle styles the pagination provided by KnpPaginatorBundle.",
+        "knplabs/knp-paginator-bundle": "KaistaerkBootstrapBundle styles the pagination provided by KnpPaginatorBundle.",
         "knplabs/knp-menu":             "Required to use KnpMenuBundle.",
-        "knplabs/knp-menu-bundle":      "BraincraftedBootstrapBundle styles the menus provided by KnpMenuBundle.",
+        "knplabs/knp-menu-bundle":      "KaistaerkBootstrapBundle styles the menus provided by KnpMenuBundle.",
         "twbs/bootstrap":               "Twitter Bootstrap provides the assets (images, CSS and JS)"
     },
     "autoload": {
