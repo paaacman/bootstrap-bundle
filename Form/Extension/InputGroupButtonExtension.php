@@ -124,9 +124,4 @@ class InputGroupButtonExtension extends AbstractTypeExtension
 
         $this->buttons[$form->getName()][$position] = $buttonBuilder;
     }
-
-    public static function getExtendedTypes(): iterable
-    {
-        return [TextType::class];
-    }
 }
