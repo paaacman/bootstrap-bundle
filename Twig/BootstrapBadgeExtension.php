@@ -7,9 +7,8 @@
 
 namespace Braincrafted\Bundle\BootstrapBundle\Twig;
 
-use Twig_Extension;
-use Twig_SimpleFunction;
-
+use Twig\TwigFunction;
+use Twig\Extension\AbstractExtension;
 /**
  * BootstrapLabelExtension
  *
@@ -21,7 +20,7 @@ use Twig_SimpleFunction;
  * @license    http://opensource.org/licenses/MIT The MIT License
  * @link       http://bootstrap.braincrafted.com Bootstrap for Symfony2
  */
-class BootstrapBadgeExtension extends Twig_Extension
+class BootstrapBadgeExtension extends AbstractExtension
 {
     /**
      * {@inheritDoc}
@@ -29,7 +28,7 @@ class BootstrapBadgeExtension extends Twig_Extension
     public function getFunctions()
     {
         return array(
-            new Twig_SimpleFunction(
+            new TwigFunction(
                 'badge',
                 array($this, 'badgeFunction'),
                 array('pre_escape' => 'html', 'is_safe' => array('html'))

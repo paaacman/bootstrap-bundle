@@ -48,4 +48,10 @@ class ButtonTypeExtension extends AbstractTypeExtension
     {
         return [ButtonType::class];
     }
+
+
+    public static function getExtendedTypes(): iterable
+    {
+        return [ButtonType::class];
+    }
 }
