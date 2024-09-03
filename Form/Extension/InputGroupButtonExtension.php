@@ -42,7 +42,7 @@ class InputGroupButtonExtension extends AbstractTypeExtension
     /**
      * {@inheritdoc}
      */
-    public function buildView(FormView $view, FormInterface $form, array $options)
+    public function buildView(FormView $view, FormInterface $form, array $options): void
     {
 
         if (!isset($this->buttons[$form->getName()])) {
@@ -63,7 +63,7 @@ class InputGroupButtonExtension extends AbstractTypeExtension
     /**
      * {@inheritdoc}
      */
-    public function buildForm(FormBuilderInterface $builder, array $options)
+    public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         if (!isset($options['attr']) || !isset($options['attr']['input_group'])) {
             return;
